@@ -1,11 +1,97 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-html{
-    font-size: 62.5%;
-    /* quy đổi này thì 1rem = 10px */
+html {
+  font-size: 62.5%;
+  /* quy đổi này thì 1rem = 10px */
 }
 /* khôi phục lại cở chữ mặc định */
-body{
-    font-size: 1.6rem;
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  /* xóa gạch chân */
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  padding: 0px 16px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-style: 1.6rem;
+  font-weight: 600;
+  border-radius: 24.5px;
+  background: #171100;
+}
+/*comment  */
+.main-content {
+  /* chiều rộng web là 1170px */
+  width: 1170px;
+  /* max width để co lại trang web không bị mất chữ  */
+  max-width: calc(100% - 48px);
+  /* nó đang lệch trái nên margon left auto */
+  margin-left: auto;
+  margin-right: auto;
+}
+.header.fixed {
+  position: sticky;
+  top: -28px;
+}
+.header {
+  background: #FFFCF4;
+}
+/*header  */
+.header .body {
+  /* xoay ngang thẻ body con của header, là 3 thẻ logo,nav,action */
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+.nav {
+  /* vì thẻ nav ngang hàng với thẻ action, nên khi tác động vào nó thì thẻ dưới nó cũng bị */
+  margin-left: auto;
+}
+.nav ul {
+  /* xoay ngang thẻ ul là con của thẻ nav */
+  display: flex;
+}
+.nav a {
+  position: relative;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  /* khoảng cách là 42, nên chỉ cần để 21 mỗi bên,8px là trên dưới, 21 là trái phải  */
+  /* sử dụng padding để tạo cái vùng chuột to ra khi gần tới đc chon, thật chất margin vẩn đc nhé */
+  padding: 8px 21px;
+}
+/* liệt kê thêm active để nó được đổ bóng thành in đậm */
+.nav li.active a,
+.nav a:hover {
+  color: #171100;
+  font-weight: 600;
+  /* làm cho nó đổ bóng */
+  text-shadow: 1px 0 0 currentColor;
+}
+.nav li.active a::after {
+  /* cho thẻ cha gần nhất là postion relative, thẻ con là positon */
+  position: absolute;
+  /* 16px là do .nav a left 16px */
+  left: 21px;
+  /* b6 là do đếm được ở figma */
+  bottom: 6px;
+  display: block;
+  /* thêm khoảng trắng và kick thước của nó */
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: #171100;
+}
+.header .btn-sign-up {
+  min-width: 144px;
+}
+.header .action{
+   margin-left: 49px; 
 }
