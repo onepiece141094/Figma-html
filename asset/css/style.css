@@ -52,7 +52,22 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* hạn chế số dòng quá 1 dòng, đằng sau nó là dấu ba chấm */
+.line-clamp{
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* qá 2 dòng thì hiển thị dấu 3 chấm */
+/* này là sử dụng đồng thời 2 class line-2 và line-clamp */
+.line-clamp.line-2{
+  --line-clamp: 2;  
+}
+.break-all{
+  word-break: break-all;
+}
+/* ====================header======================== */
 .header.fixed {
   z-index: 1;
   position: sticky;
@@ -308,6 +323,8 @@ a {
   gap: 30px;
 }
 .popular .course-item {
+  /* trọng số của những item này sẽ bằng nhau để không bị vỡ form khi thêm nhiều chữ */
+  flex: 1;
   border-radius: 12px;
   background: #fff;
   border: 1px solid #e2dfda;
