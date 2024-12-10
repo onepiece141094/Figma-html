@@ -53,7 +53,7 @@ a {
   margin-right: auto;
 }
 /* hạn chế số dòng quá 1 dòng, đằng sau nó là dấu ba chấm */
-.line-clamp{
+.line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: var(--line-clamp, 1);
   -webkit-box-orient: vertical;
@@ -61,10 +61,10 @@ a {
 }
 /* qá 2 dòng thì hiển thị dấu 3 chấm */
 /* này là sử dụng đồng thời 2 class line-2 và line-clamp */
-.line-clamp.line-2{
-  --line-clamp: 2;  
+.line-clamp.line-2 {
+  --line-clamp: 2;
 }
-.break-all{
+.break-all {
   word-break: break-all;
 }
 /* ====================header======================== */
@@ -352,7 +352,7 @@ a {
   /* căng cho nó nằm 2 đầu  */
   justify-content: space-between;
 }
-.popular .course-item .title a{
+.popular .course-item .title a {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.67;
@@ -385,4 +385,59 @@ a {
 .popular .course-item .btn-book:hover {
   background: var(--primary-color);
   cursor: pointer;
+}
+/* =========feedback============ */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #2e2100;
+}
+.feedback-item {
+  display: flex;
+}
+.feedback .avata {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feedback-item .info .member-name {
+  margin-top: 18px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.42;
+  color: #F7F7F7;
+}
+.feedback-item .info .desc {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  color: #BFBCB2 ;
+}
+.feedback-item .dots{
+  gap: 6px;
+  display: flex;
+  margin-top: 28px;
+}
+.feedback-item .dot{
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+.feedback-item .content{
+  width: 66%;
+  margin-left: auto;
+}
+.feedback-item blockquotes{
+font-size: 2.6rem;
+font-style: italic;
+line-height: 1.54;
+color: #FFF;
+}
+.feedback-item .dot.active{
+  background: var(--primary-color);
+  cursor: default;
 }
